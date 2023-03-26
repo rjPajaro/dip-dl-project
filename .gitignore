@@ -1,3 +1,5 @@
 data/
 segmentation/Implementation_U_Net/segm_model_v3.h5
 segmentation/Implementation_U_Net/DeepLab_Model.h5
+segmentation/Implementation_U_Net/logs
+segmentation/Implementation_U_Net/__pycache__

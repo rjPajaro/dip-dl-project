@@ -10,8 +10,8 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 from keras.models import Model
-from tensorflow.keras.applications import ResNet50
-from keras.layers import Concatenate,AveragePooling2D,Reshape,Dense,GlobalAveragePooling2D,Activation, Input, Conv2D, MaxPooling2D, UpSampling2D, concatenate, Conv2DTranspose, BatchNormalization, Dropout, Lambda
+from tensorflow.keras.applications import ResNet50, ResNet101
+from tensorflow.keras.layers import Concatenate,AveragePooling2D,Reshape,Dense,GlobalAveragePooling2D,Activation, Input, Conv2D, MaxPooling2D, UpSampling2D, concatenate, Conv2DTranspose, BatchNormalization, Dropout, Lambda
 
 def SqueezeAndExcite(inputs, ratio=8):
     init = inputs
@@ -66,7 +66,7 @@ def deeplabv3_plus(shape):
     inputs = Input(shape)
 
     """ Encoder """
-    encoder = ResNet50(weights="imagenet", include_top=False, input_tensor=inputs)
+    encoder = ResNet101(weights="imagenet", include_top=False, input_tensor=inputs)
 
     image_features = encoder.get_layer("conv4_block6_out").output
     x_a = ASPP(image_features)
