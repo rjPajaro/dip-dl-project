@@ -24,13 +24,23 @@ def getStareData(IMAGE_SIZE):
         if(f1.endswith(".jpg") or f1.endswith(".png") or f1.endswith(".jpeg")):
             
             orgImg = Image.open(f1).resize(IMAGE_SIZE)
-            AMD_w_others.append(np.array(orgImg))
+            mirImg = ImageOps.mirror(Image.open(f1).resize(IMAGE_SIZE))
+            
+            AMD_w_others.append(np.array(orgImg)) 
+            AMD_w_others.append(np.array(mirImg))
+            
+            
     
     for f2 in normal_files:
         if(f2.endswith(".jpg") or f2.endswith(".png") or f1.endswith(".jpeg")):
             
             orgImg = Image.open(f2).resize(IMAGE_SIZE)
-            normal.append(np.array(orgImg))
+            mirImg = ImageOps.mirror(Image.open(f1).resize(IMAGE_SIZE))
+            
+            normal.append(np.array(orgImg)) 
+            normal.append(np.array(mirImg))
+            
+            
     
     AMD_w_others_np = np.array(AMD_w_others)
     normal_np = np.array(normal)
@@ -71,19 +81,34 @@ def getRFMIDData(IMAGE_SIZE):
         if(f1.endswith(".jpg") or f1.endswith(".png") or f1.endswith(".jpeg")):
             
             orgImg = Image.open(f1).resize(IMAGE_SIZE)
-            pure_AMD.append(np.array(orgImg))
+            mirImg = ImageOps.mirror(Image.open(f1).resize(IMAGE_SIZE))
+            
+            pure_AMD.append(np.array(orgImg)) 
+            pure_AMD.append(np.array(mirImg))
+            
+            
     
     for f2 in normal_files:
         if(f2.endswith(".jpg") or f2.endswith(".png") or f2.endswith(".jpeg")):
             
             orgImg = Image.open(f2).resize(IMAGE_SIZE)
-            normal.append(np.array(orgImg))
+            mirImg = ImageOps.mirror(Image.open(f1).resize(IMAGE_SIZE))
+            
+            normal.append(np.array(orgImg)) 
+            normal.append(np.array(mirImg))
+            
+            
     
     for f3 in amd_w_others_files:
         if(f3.endswith(".jpg") or f3.endswith(".png") or f3.endswith(".jpeg")):
             
             orgImg = Image.open(f3).resize(IMAGE_SIZE)
-            AMD_w_others.append(np.array(orgImg))
+            mirImg = ImageOps.mirror(Image.open(f1).resize(IMAGE_SIZE))
+            
+            AMD_w_others.append(np.array(orgImg)) 
+            AMD_w_others.append(np.array(mirImg))
+            
+            
             
     pure_amd_np = np.array(pure_AMD)
     AMD_w_others_np = np.array(AMD_w_others)
@@ -131,19 +156,35 @@ def getODIRData(IMAGE_SIZE):
         if(f1.endswith(".jpg") or f1.endswith(".png") or f1.endswith(".jpeg")):
             
             orgImg = Image.open(f1).resize(IMAGE_SIZE)
-            pure_AMD.append(np.array(orgImg))
+            mirImg = ImageOps.mirror(Image.open(f1).resize(IMAGE_SIZE))
+            
+            pure_AMD.append(np.array(orgImg)) 
+            pure_AMD.append(np.array(mirImg))
+            
+            
+            
     
     for f2 in normal_files:
         if(f2.endswith(".jpg") or f2.endswith(".png") or f2.endswith(".jpeg")):
             
             orgImg = Image.open(f2).resize(IMAGE_SIZE)
-            normal.append(np.array(orgImg))
+            mirImg = ImageOps.mirror(Image.open(f1).resize(IMAGE_SIZE))
+            
+            normal.append(np.array(orgImg)) 
+            normal.append(np.array(mirImg))
+            
+            
     
     for f3 in amd_w_others_files:
         if(f3.endswith(".jpg") or f3.endswith(".png") or f3.endswith(".jpeg")):
             
             orgImg = Image.open(f3).resize(IMAGE_SIZE)
-            AMD_w_others.append(np.array(orgImg))
+            mirImg = ImageOps.mirror(Image.open(f1).resize(IMAGE_SIZE))
+            
+            AMD_w_others.append(np.array(orgImg)) 
+            AMD_w_others.append(np.array(mirImg))
+            
+            
             
     pure_amd_np = np.array(pure_AMD)
     AMD_w_others_np = np.array(AMD_w_others)
