@@ -3,3 +3,16 @@ segmentation/Implementation_U_Net/segm_model_v3.h5
 segmentation/Implementation_U_Net/DeepLab_Model.h5
 segmentation/Implementation_U_Net/logs
 segmentation/Implementation_U_Net/__pycache__
+segmentation/Implementation_U_Net/datapure
+segmentation/Implementation_U_Net/DeepLabTest
+segmentation/Implementation_U_Net/greenChan
+segmentation/Implementation_U_Net/imgDeep
+segmentation/Implementation_U_Net/newimg
+segmentation/Implementation_U_Net/newMasks
+segmentation/Implementation_U_Net/normalTesting
+segmentation/Implementation_U_Net/testingFolder
+segmentation/Implementation_U_Net/segm_model_v4.h5
+segmentation/Implementation_U_Net/pure_amd_model_v1.h5
+rendered-models/
+pickles/
+.conda/
