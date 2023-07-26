@@ -14,5 +14,7 @@ segmentation/Implementation_U_Net/testingFolder
 segmentation/Implementation_U_Net/segm_model_v4.h5
 segmentation/Implementation_U_Net/pure_amd_model_v1.h5
 rendered-models/
+classification/logs/
+classification/pure_amd_model_v1.h5
 pickles/
 .conda/
